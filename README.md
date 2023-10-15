@@ -1,5 +1,6 @@
 # M07-login
-Un fitxer html pel formulari. Contindrà el formulari segons els camps indicats anteriorment. S’enviarà la informació a través de POST al fitxer php.
+Un fitxer html pel formulari. Contindrà el formulari segons els camps indicats anteriorment. 
+S’enviarà la informació a través de POST al fitxer php.
 
 ![Imagen formulario](https://github.com/Karenl9/M07-login/blob/karenbaque_P3/1.png)
 
