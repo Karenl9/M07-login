@@ -45,12 +45,13 @@ echo $active . "<br>";
     // Ejecutar la consulta
     if (mysqli_query($conn, $sql)) {
         header('Location: mostrar.php');
+        mysqli_close($conn);
+        exit();
     } else {
         echo "Error al ejecutar la consulta SQL: " . mysqli_error($conn);
     }
     }
 
-        //mysqli_close($connect);
     ?>  
 
 </body>
