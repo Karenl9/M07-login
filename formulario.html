@@ -8,31 +8,25 @@
 <body>
     <h2>Formulari d'Usuari</h2>
     <form action="procesar.php" method="post">
-        <label>User_id:</label>
-        <input type="text" name="user_id" required><br>
-        <br>
+        <label form="user_id">User_id:</label>
+        <input type="number" name="user_id" required><br>
         <label>Nom:</label>
         <input type="text" name="name" required><br>
-        <br>
         <label>Cognom:</label>
         <input type="text" name="surname" required><br>
-        <br>
         <label>Contrasenya:</label>
         <input type="password" name="password" required><br>
-        <br>
         <label>Email:</label>
         <input type="email" name="email" required><br>
-        <br>
         <label>Rol:</label>
         <select name="rol" required>
             <option value="alumnat">Alumnat</option>
             <option value="professorat">Professorat</option>
         </select><br>
-        <br>
         <label>Actiu:</label>
         <input type="checkbox" name="active" value="1"><br>
-        <br>
         <input type="submit" value="Enviar">
+        <a href="login.html">Iniciar sesion usuario</a>
     </form>
 </body>
 </html>
