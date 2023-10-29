@@ -35,13 +35,17 @@ Un cap fet tots els passos correctement ens redigirà a la pàgina d’inici.
 
 Exemple de la pantalla index.php, quan és un alumne:
 
-![Imagen indexalum]([https://github.com/Karenl9/M07-login/blob/marcosoliz_P5/5.png](https://github.com/Karenl9/M07-login/blob/main/11.png))
+
+![Imagen indexalum]([https://github.com/Karenl9/M07-login/blob/main/11.png])
 
 Exemple de la pantalla index.php, quan és un professor.
+
 ![Imagen indexprof]([https://github.com/Karenl9/M07-login/blob/marcosoliz_P5/5.png](https://github.com/Karenl9/M07-login/blob/main/12.png))
 
 Exemple de la pantalla de descripció de l’usuari. S’haurà d’accedir a través del mètode GET al seleccionar l’enllaç Mostrar informació
+
 ![Imagen descripcion]([https://github.com/Karenl9/M07-login/blob/main/14.png])
 
 Exemple de com passar el mètode GET
+
 ![Imagen urlget]([https://github.com/Karenl9/M07-login/blob/main/13.png])
