@@ -35,7 +35,6 @@ Un cap fet tots els passos correctement ens redigirà a la pàgina d’inici.
 
 Exemple de la pantalla index.php, quan és un alumne:
 
-
 ![Imagen indexalum](https://github.com/Karenl9/M07-login/blob/main/11.png)
 
 Exemple de la pantalla index.php, quan és un professor.
