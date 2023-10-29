@@ -1,4 +1,7 @@
 <?php
+//Se inicia sesion
+session_start();   
+
 //Unir la BD 
 include "bdConf.php";
 
@@ -19,31 +22,19 @@ try{
         // Para comprobar si existe el usuario
         $query= "SELECT * FROM `user` WHERE `email`='$email' AND `password`='$password'";
         $users= mysqli_query($conn, $query);
-
+        //Se utiliza las variables de sesion per guardar o modificar informació que podrem consultar en altres pàgines
         if($users){
             $numero = mysqli_num_rows($users);
-            if ($numero > 0) {
-                foreach($users as $us){
-                    //Si el usuario és alumno
-                    if($us['rol']=="alumnat"){
-                        echo "Hola ". $us['name']. " ets alumne<br>";
-                        echo "nom: ". $us['name']. "<br>";
-                        echo "cognom: ". $us['surname']. "<br>";
-                        echo "email: ". $us['email']. "<br>";
-                    //Si el usuario és profesor
-                    }else {
-                        echo "Hola ". $us['name']. ", ets professor!!<br>"; 
-                        echo "<br>La llista d'usuaris de la base de dades és:<br>";
-                        // Select de tots els usuaris
-                        $queryquery= "SELECT * FROM `user` WHERE `rol`= 'professorat'";
-                        $todos= mysqli_query($conn, $queryquery);
-                        foreach($todos as $alguno){
-                        echo "<br>Nom i cognom: " . $alguno['name']." ". $alguno['surname']. "<br>";
-                        }
-                    }
-                }   
+            if ($numero > 0) { 
+                $us = mysqli_fetch_array($users);
+                $_SESSION["LoggedIn"] = true;
+                $_SESSION["name"] = $us["name"];
+                $_SESSION["rol"] = $us["rol"];
+                $_SESSION["user_id"] = $us["user_id"];
+                //Se redirige al index
+                header("Location:index.php");
             }else {
-                //si no es un usuario y contraseña correcta
+                //si es un usuario y contraseña incorrecto se redirige al login
                 include 'login.html';
                 echo "Els valors son incorrectes";
             }
