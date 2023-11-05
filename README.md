@@ -1,5 +1,5 @@
 # M07-login
-ACTIVITAT
+ACTIVITAT 7
 
 Seguint la pràctica anterior:
 
