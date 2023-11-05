@@ -1,7 +1,7 @@
 <?php
 
 setcookie("lang", $_GET["lang"], time()+600);
-header("Location: index.php")
+header("Location: index.php");
 
 ?>
 
